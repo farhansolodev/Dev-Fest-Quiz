@@ -1,6 +1,6 @@
 import java.util.Date; // to allow our tasks to run at the current time
 import java.util.Timer; // contains the method which will allow a task to run at specific intervals
-import java.util.TimerTask; //contains an abstract inherited run() method
+import java.util.TimerTask; //contains an abstract run() method
 
 public class drawChallenge {
 	static Timer timer = new Timer();
@@ -12,7 +12,7 @@ public class drawChallenge {
 
 class Output extends TimerTask {
 	
-	public void run() { //inherited run method from the class Object now defined
+	public void run() { //abstract method inherited from TimerTask 
 		drawChallenge.i++;
 		if (drawChallenge.i % 3 != 0 && drawChallenge.i % 5 != 0) {
 			System.out.println("google");
